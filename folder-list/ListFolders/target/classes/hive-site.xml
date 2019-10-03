@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<property>
+		<name>hive.metastore.event.db.notification.api.auth</name>
+		<value>false</value>
+		<description>
+			Should metastore do authorization against database notification related APIs such as get_next_notification.
+			If set to true, then only the superusers in proxy settings have the permission
+		</description>
+	</property>
+	<property>
+		<name>hive.server2.enable.doAs</name>
+		<value>false</value>
+		<description>
+			Setting this property to true will have HiveServer2 execute
+			Hive operations as the user making the calls to it.
+		</description>
+	</property>	
+</configuration>
