@@ -13,12 +13,23 @@ object SampleJob extends App {
 
 	val sc = spark.sparkContext
 
+	val nums = Array(1,2,3,5,6)
+	val rdd = sc.parallelize(nums)
+
+	import spark.implicits._
+	val df = rdd.toDF("num")
+
+	df.show()
+
+	/*
 	val logPath = "hdfs://pshp111zatcwi:9000/u_ex190620.log"
 
 	val logTextData = sc.textFile(logPath)
 		.filter(line=> !line.startsWith("#"))
 
-	println(logTextData.count())
+	println(logTextData.count())\
+
+	 */
 
 	/*
 	val logData = spark.read
