@@ -12,9 +12,9 @@ val spark = SparkSession
 	.builder()
 	.appName("Spark Worksheet")
 	.master("yarn")
-	.config("spark.hadoop.fs.defaultFS", "hdfs://pshp111zatcwi:9000")
-	.config("spark.hadoop.yarn.resourcemanager.hostname", "pshp111zatcwi")
-	.config("spark.hadoop.yarn.resourcemanager.address", "pshp111zatcwi:8055")
+	.config("spark.hadoop.fs.defaultFS", "hdfs://pshp111:9000")
+	.config("spark.hadoop.yarn.resourcemanager.hostname", "pshp111")
+	.config("spark.hadoop.yarn.resourcemanager.address", "pshp111:8055")
 	.getOrCreate()
 
 val file = spark.read.csv("C:\\Temp\\IISLogs\\W3SVC1291934293\\u_ex190620.log")
